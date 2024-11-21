@@ -1,0 +1,6 @@
+dotenv
+flask
+os
+logging
+dotenvcohere
+flask_cors

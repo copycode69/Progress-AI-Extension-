@@ -1,0 +1,21 @@
+{
+  "name": "Progress AI",
+  "version": "1.0",
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0FAp+xWiJpGBmsKPhGcqF4/gQN9F5tmXgEVYEHUHc8HcBIUcT+9w+jo4q2OtXa2ThqgEXsx2zcNZIWJ/5yXcofVry5E2/HKBuLWHNtYOlI1rhwc/CLujo0RHhzF7rIiYcMPQdBhzr6L0u5u9N29VUWjLozltquKRcUbjXNe4LT7+q/akhn5tvfvWHkQ9qC6mRjvGwGTFlh1A6+vWKKSVYx/J+IBHW+I2X5NlAxwG734OMYVWRWK487jf1wsWZ2jHRTqg9TB3htT+84r7+E3kFYMycow9+2EhvoI2k5VGhZw1tAJcpie1Poozc5u8CTrZ4sZ5LK4h59OCOxmejC048QIDAQAB",
+  "background": {
+    "service_worker": "sw.js"
+  },
+ "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+  "icons": {
+  "128": "logo.png"
+  },
+  "permissions": ["activeTab","history","readingList"]
+}
+

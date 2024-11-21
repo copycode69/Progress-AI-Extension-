@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress AI & Todo List</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        min-width: 250px;
+      }
+      #chatbox {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+      }
+      #userInput {
+        width: 80%;
+        padding: 10px;
+      }
+      #sendBtn {
+        width: 15%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      h1, h2 {
+        margin-top: 20px;
+      }
+    </style>
+
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <!-- AI Chatbot Section -->
+    <h1>AI Chatbot</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button id="sendBtn">Send</button>
+
+    <!-- Todo List Section -->
+    <h1>Today Todo List</h1>
+    <form>
+      <section>
+        <h2>Add new item</h2>
+        <label>
+          <span>Title</span>
+          <input type="text" name="title" value="Example URL" />
+        </label>
+        <label>
+          <span>URL</span>
+          <input type="text" name="url" value="https://example.com/*" />
+        </label>
+        <label>
+          <span>Has been read</span>
+          <select name="read" value="no">
+            <option value="no">Today</option>
+            <option value="yes">Yesterday</option>
+          </select>
+        </label>
+        <button type="button" id="add-item">Add item</button>
+        <p id="error"></p>
+      </section>
+
+      <section>
+        <h2>Items</h2>
+        <table id="items">
+          <tr>
+            <th>Title</th>
+            <th>Read</th>
+            <th>Created At</th>
+            <th>Actions</th>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Yesterday Typed URLs:</h2>
+        <div id="typedUrl_div"></div>
+      </section>
+    </form>
+
+    
+    <template id="table-item">
+      <tr>
+        <td><a>Title</a></td>
+        <td>
+          <select name="read" value="no">
+            <option value="no">Today</option>
+            <option value="yes">Yesterday</option>
+          </select>
+        </td>
+        <td>1/1/1970, 00:00:00</td>
+        <td>
+          <button class="update-button">Update</button>
+          <button class="delete-button">Delete</button>
+        </td>
+      </tr>
+    </template>
+
+    <script src="popup.js"></script>
+    <script src="request.js"></script>
+  </body>
+</html>
